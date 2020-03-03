@@ -8,46 +8,29 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate, NSControlTextEditingDelegate{
+class ViewController: NSViewController{
+    
+    // MARK: Properties defenition
     var systems = ["Двоичная", "Троичная", "Пятеричная", "Восьмеричная", "Десятичная", "Шестнадцатиричная"]
-
+    var firstSystem = 0
+    var secondSystem = 0
+    
+    // MARK: IBOutlets defenition
     @IBOutlet weak var starterNSComboBox: NSComboBox!
     @IBOutlet weak var finalNSComboBox: NSComboBox!
     @IBOutlet weak var startNSTextField: NSTextField!
     @IBOutlet weak var finalNSTextField: NSTextField!
     
+    // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.starterNSComboBox.usesDataSource = true
-        self.starterNSComboBox.delegate = self
-        self.starterNSComboBox.dataSource = self
-        
-        self.finalNSComboBox.usesDataSource = true
-        self.finalNSComboBox.delegate = self
-        self.finalNSComboBox.dataSource = self
-        self.starterNSComboBox.addItems(withObjectValues: systems)
+        configure()
     }
     
-    override var representedObject: Any? {
-        didSet {
-        }
-    }
-    
-    func numberOfItems(in comboBox: NSComboBox) -> Int {
-        // anArray is an Array variable containing the objects
-        return systems.count
-    }
-    
-    // Returns the object that corresponds to the item at the specified index in the combo box
-    func comboBox(_ comboBox: NSComboBox, objectValueForItemAt index: Int) -> Any? {
-        return systems[index]
-    }
-    
-    
+    // MARK: IBActions defenition
     @IBAction func convertActionButton(_ sender: Any) {
         
-        var firstSystem = 0
         switch starterNSComboBox.indexOfSelectedItem {
         case 1:
             firstSystem = 3
@@ -63,7 +46,6 @@ class ViewController: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
             firstSystem = 2
         }
         
-        var secondSystem = 0
         switch finalNSComboBox.indexOfSelectedItem {
         case 1:
             secondSystem = 3
@@ -82,17 +64,20 @@ class ViewController: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
         let firstNumber = startNSTextField.stringValue
         
         if let firstNumber = Int(firstNumber, radix: firstSystem){
-            let result = String(firstNumber, radix:secondSystem)
-            finalNSTextField.stringValue = result
-        } else{
+            finalNSTextField.stringValue = String(firstNumber, radix:secondSystem)
             
+        } else{
             finalNSTextField.stringValue = ""
-
-            dialogOKCancel(question: "Ошибка !", text: "Возможные причины:\n1. Неправильное число \n2. Пустое поле \n3. Этого числа нет в выбраной системе")
+            
+            showOkDialogWindow(question: "Ошибка !", text: "Возможные причины:\n1. Неправильное число \n2. Пустое поле \n3. Этого числа нет в выбраной системе")
         }
     }
+}
+
+// MARK: Private
+private extension ViewController {
     
-    func dialogOKCancel(question: String, text: String) {
+    func showOkDialogWindow(question: String, text: String) {
         let alert = NSAlert()
         alert.messageText = question
         alert.informativeText = text
@@ -100,5 +85,29 @@ class ViewController: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
         alert.addButton(withTitle: "OK")
         alert.runModal()
     }
-
+    
+    func configure(){
+        self.starterNSComboBox.usesDataSource = true
+        self.starterNSComboBox.delegate = self
+        self.starterNSComboBox.dataSource = self
+        self.starterNSComboBox.addItems(withObjectValues: systems)
+        
+        self.finalNSComboBox.usesDataSource = true
+        self.finalNSComboBox.delegate = self
+        self.finalNSComboBox.dataSource = self
+        self.finalNSComboBox.addItems(withObjectValues: systems)
+    }
 }
+
+// MARK: NSComboBoxDelegate
+extension ViewController: NSComboBoxDataSource, NSComboBoxDelegate{
+    
+    func numberOfItems(in comboBox: NSComboBox) -> Int {
+        return systems.count
+    }
+    
+    func comboBox(_ comboBox: NSComboBox, objectValueForItemAt index: Int) -> Any? {
+        return systems[index]
+    }
+}
+

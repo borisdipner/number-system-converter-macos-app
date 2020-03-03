@@ -761,14 +761,6 @@
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <objectValues>
-                                        <string>Двоичная</string>
-                                        <string>Троичная</string>
-                                        <string>Пятеричная</string>
-                                        <string>Восьмеричная</string>
-                                        <string>Десятичная</string>
-                                        <string>Шестнадзатиричная</string>
-                                    </objectValues>
                                 </comboBoxCell>
                             </comboBox>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-VS-zzk">
@@ -778,14 +770,6 @@
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <objectValues>
-                                        <string>Двоичная</string>
-                                        <string>Троичная</string>
-                                        <string>Пятеричная</string>
-                                        <string>Восьмеричная</string>
-                                        <string>Десятичная</string>
-                                        <string>Шестнадзатиричная</string>
-                                    </objectValues>
                                 </comboBoxCell>
                             </comboBox>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-2o-vgV">
