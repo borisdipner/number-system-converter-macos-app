@@ -11,7 +11,7 @@ import Cocoa
 class ViewController: NSViewController{
     
     // MARK: Properties defenition
-    var systems = ["Двоичная", "Троичная", "Пятеричная", "Восьмеричная", "Десятичная", "Шестнадцатиричная"]
+    var systems = ["Binary", "Trinity", "Fivefold", "Octal", "Decimal", "Hexadecimal"]
     var firstSystem = 0
     var secondSystem = 0
     
@@ -69,7 +69,7 @@ class ViewController: NSViewController{
         } else{
             finalNSTextField.stringValue = ""
             
-            showOkDialogWindow(question: "Ошибка !", text: "Возможные причины:\n1. Неправильное число \n2. Пустое поле \n3. Этого числа нет в выбраной системе")
+            showOkDialogWindow(question: "Error !", text: "Possible reasons:\n1. Wrong numbers \n2. Empty field \n3. Selected system hasn't entered number")
         }
     }
 }

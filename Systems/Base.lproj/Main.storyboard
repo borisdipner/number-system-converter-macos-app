@@ -709,81 +709,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="235"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNE-gR-iCE">
-                                <rect key="frame" x="18" y="158" width="39" height="16"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aNE-gR-iCE">
+                                <rect key="frame" x="18" y="151" width="39" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="From " id="FxE-Tp-O9k">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-xy-ev0">
-                                <rect key="frame" x="18" y="121" width="19" height="16"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="To" id="wK7-mZ-mfX">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uv-nb-vcp">
-                                <rect key="frame" x="273" y="153" width="173" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0uv-nb-vcp">
+                                <rect key="frame" x="275" y="148" width="185" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="Agc-Hq-xWd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XiR-Gb-1ei">
-                                <rect key="frame" x="273" y="117" width="173" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XiR-Gb-1ei">
+                                <rect key="frame" x="275" y="99" width="185" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="PU5-8x-Afp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhP-dr-fPF">
-                                <rect key="frame" x="271" y="182" width="82" height="16"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qhP-dr-fPF">
+                                <rect key="frame" x="271" y="179" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Your number" id="Mb0-j9-pAn">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TmB-1f-4eo">
-                                <rect key="frame" x="75" y="150" width="177" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TmB-1f-4eo">
+                                <rect key="frame" x="75" y="143" width="183" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="QB9-dg-DMd"/>
+                                </constraints>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" completes="NO" numberOfVisibleItems="16" id="f61-kG-kVM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
                             </comboBox>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-VS-zzk">
-                                <rect key="frame" x="75" y="114" width="177" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-VS-zzk">
+                                <rect key="frame" x="75" y="95" width="183" height="27"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" completes="NO" numberOfVisibleItems="16" id="wiZ-cH-Lgz">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
                             </comboBox>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-b5-ODY">
-                                <rect key="frame" x="73" y="182" width="100" height="16"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Number system" id="uCX-cC-cvg">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-2o-vgV">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-2o-vgV">
                                 <rect key="frame" x="196" y="43" width="89" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Convert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zwm-QU-725">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -792,7 +770,50 @@
                                     <action selector="convertActionButton:" target="XfG-lQ-9wD" id="vJb-tp-qEf"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-b5-ODY">
+                                <rect key="frame" x="73" y="179" width="100" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Number system" id="uCX-cC-cvg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-xy-ev0">
+                                <rect key="frame" x="18" y="101" width="19" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="To" id="wK7-mZ-mfX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0uv-nb-vcp" secondAttribute="trailing" constant="20" symbolic="YES" id="068-T2-OFZ"/>
+                            <constraint firstItem="TmB-1f-4eo" firstAttribute="leading" secondItem="aNE-gR-iCE" secondAttribute="trailing" constant="20" id="0Ax-UH-wP2"/>
+                            <constraint firstItem="TmB-1f-4eo" firstAttribute="top" secondItem="yUU-b5-ODY" secondAttribute="bottom" constant="10" id="1E2-hz-TQg"/>
+                            <constraint firstItem="aNE-gR-iCE" firstAttribute="leading" secondItem="BDr-xy-ev0" secondAttribute="leading" id="2RO-N3-xnp"/>
+                            <constraint firstItem="BDr-xy-ev0" firstAttribute="baseline" secondItem="b5V-VS-zzk" secondAttribute="firstBaseline" id="3Hh-EE-uSg"/>
+                            <constraint firstItem="BDr-xy-ev0" firstAttribute="baseline" secondItem="b5V-VS-zzk" secondAttribute="baseline" id="7cm-nM-h2n"/>
+                            <constraint firstItem="E2j-2o-vgV" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Cav-gK-iUS"/>
+                            <constraint firstItem="0uv-nb-vcp" firstAttribute="trailing" secondItem="XiR-Gb-1ei" secondAttribute="trailing" id="E6C-OD-7Of"/>
+                            <constraint firstItem="yUU-b5-ODY" firstAttribute="leading" secondItem="TmB-1f-4eo" secondAttribute="leading" id="H3K-sB-bQR"/>
+                            <constraint firstItem="TmB-1f-4eo" firstAttribute="trailing" secondItem="b5V-VS-zzk" secondAttribute="trailing" id="HAV-pu-sLJ"/>
+                            <constraint firstItem="XiR-Gb-1ei" firstAttribute="top" secondItem="0uv-nb-vcp" secondAttribute="bottom" constant="29" id="M1f-Qr-jSI"/>
+                            <constraint firstItem="b5V-VS-zzk" firstAttribute="bottom" secondItem="XiR-Gb-1ei" secondAttribute="bottom" id="N4A-V5-KYb"/>
+                            <constraint firstAttribute="trailing" secondItem="qhP-dr-fPF" secondAttribute="trailing" constant="129" id="Pus-Ef-3d4"/>
+                            <constraint firstItem="0uv-nb-vcp" firstAttribute="leading" secondItem="XiR-Gb-1ei" secondAttribute="leading" id="R1A-TO-fAp"/>
+                            <constraint firstItem="aNE-gR-iCE" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Xhi-f6-v67"/>
+                            <constraint firstItem="yUU-b5-ODY" firstAttribute="baseline" secondItem="qhP-dr-fPF" secondAttribute="baseline" id="Yjb-14-3U8"/>
+                            <constraint firstItem="yUU-b5-ODY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="a7h-3f-p51"/>
+                            <constraint firstItem="b5V-VS-zzk" firstAttribute="top" secondItem="TmB-1f-4eo" secondAttribute="bottom" constant="27" id="cu3-o4-fSn"/>
+                            <constraint firstItem="0uv-nb-vcp" firstAttribute="leading" secondItem="TmB-1f-4eo" secondAttribute="trailing" constant="20" id="eSm-53-qgV"/>
+                            <constraint firstItem="aNE-gR-iCE" firstAttribute="baseline" secondItem="0uv-nb-vcp" secondAttribute="firstBaseline" id="ebj-J5-Tde"/>
+                            <constraint firstItem="BDr-xy-ev0" firstAttribute="centerY" secondItem="XiR-Gb-1ei" secondAttribute="centerY" id="lkA-Jl-5p8"/>
+                            <constraint firstItem="E2j-2o-vgV" firstAttribute="top" secondItem="XiR-Gb-1ei" secondAttribute="bottom" constant="28" id="m4x-JB-PKk"/>
+                            <constraint firstItem="aNE-gR-iCE" firstAttribute="baseline" secondItem="0uv-nb-vcp" secondAttribute="baseline" id="npS-4C-Gz6"/>
+                            <constraint firstItem="TmB-1f-4eo" firstAttribute="leading" secondItem="b5V-VS-zzk" secondAttribute="leading" id="q9P-Ls-Y34"/>
+                            <constraint firstItem="0uv-nb-vcp" firstAttribute="top" secondItem="qhP-dr-fPF" secondAttribute="bottom" constant="9" id="yja-CA-WdK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="finalNSComboBox" destination="b5V-VS-zzk" id="x8J-Vo-HC0"/>
