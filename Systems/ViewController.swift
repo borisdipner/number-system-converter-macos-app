@@ -63,13 +63,26 @@ class ViewController: NSViewController{
         
         let firstNumber = startNSTextField.stringValue
         
-        if let firstNumber = Int(firstNumber, radix: firstSystem){
-            finalNSTextField.stringValue = String(firstNumber, radix:secondSystem)
-            
-        } else{
+        if firstNumber == ""{
+            startNSTextField.stringValue = ""
             finalNSTextField.stringValue = ""
+            showOkDialogWindow(question: "Warning !", text: "Input field is empty, pls enter number ypu want to convert!")
+        } else if firstSystem == secondSystem {
+            startNSTextField.stringValue = ""
+            finalNSTextField.stringValue = ""
+            showOkDialogWindow(question: "Warning !", text: "Are you trying convert number from \(systems[starterNSComboBox.indexOfSelectedItem]) to \(systems[starterNSComboBox.indexOfSelectedItem])? Why? :)")
             
-            showOkDialogWindow(question: "Error !", text: "Possible reasons:\n1. Wrong numbers \n2. Empty field \n3. Selected system hasn't entered number")
+        } else if let firstNumber = Int(firstNumber, radix: firstSystem){
+            finalNSTextField.stringValue = String(firstNumber, radix:secondSystem)
+        } else {
+            startNSTextField.stringValue = ""
+            finalNSTextField.stringValue = ""
+            if firstSystem == 16{
+                showOkDialogWindow(question: "Warning !", text: "\(systems[starterNSComboBox.indexOfSelectedItem]) system contains numbers only from 0 to \(firstSystem-1) and letters A B C D F")
+            }
+            else{
+                showOkDialogWindow(question: "Warning !", text: "\(systems[starterNSComboBox.indexOfSelectedItem]) system contains numbers only from 0 to \(firstSystem-1)")
+            }
         }
     }
 }
@@ -81,7 +94,7 @@ private extension ViewController {
         let alert = NSAlert()
         alert.messageText = question
         alert.informativeText = text
-        alert.alertStyle = .critical
+        alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
         alert.runModal()
     }
